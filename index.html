@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q3 Drill 2 </title>
+
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: rgb(190, 243, 202);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: rgb(150, 245, 176);
+            text-align: center;
+            border-radius: 15px;
+            padding: 30px 25px; 
+        }
+
+        form {
+            background-color: rgb(214, 213, 213);
+            padding: 30px 25px;
+            border-radius: 10px;
+            width: 320px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #979797ab;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+            color: black;
+            border-radius: 6px;
+            background-color: rgb(240, 255, 242);
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <form>
+
+        <h1> Basic Calculator Version 2.0 </h1> 
+
+            <p ontoggle="toggle()" id="tog1"> Enter your two values and click on the Display button. </p>
+            <script>
+                function toggle(){
+                    document.getElementById("tog1").innerHTML;
+                }
+            </script>
+
+        <label> Enter 1st Number: </label>
+        <input type="number" class="form-control" id="num1">
+
+        <label> Enter 2nd Number: </label>
+        <input type="number" class="form-control" id="num2">
+        <br>
+
+        <button type="button" class="btn btn-success" 
+        onclick="sapphire()"
+        style="width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            background-color: rgb(150, 237, 176);
+            color: black;
+            font-size: 16px;
+            cursor: pointer; "
+            > Display </button>
+
+    </form>
+
+    <script>
+
+        function sapphire(){
+            let sap1 = document.getElementById("num1").value;
+            let sap2 = document.getElementById("num2").value;
+            let ops = Number(sap1) - Number(sap2);
+
+            window.alert("The difference is " + ops).innerHTML;
+        }
+
+    </script>
+
+</body>
+</html>
